@@ -3,7 +3,7 @@ package NumberGuessingGame;
 import java.util.Scanner;
 
 public class GameProgram {
-    public static void main(String[] args) {
+     static void main() {
         System.out.println("Welcome to the Number Guessing Game!\n" +
                 "I'm thinking of a number between 1 and 100.\n");
         System.out.println("Please select the difficulty level:\n" +
@@ -38,7 +38,7 @@ public class GameProgram {
 
         Game main = new Game(userchoice);
         int chances = main.getChances();
-        int userguess;
+        int userguess = 101;
         while (chances > 0) {
             System.out.print("Enter your guess: ");
             if (input.hasNextInt()) {
