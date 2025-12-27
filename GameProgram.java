@@ -12,6 +12,7 @@ public class GameProgram {
                 "If chances reach 0 without guessing correct number, a GAME OVER message will be displayed\n" +
                 "You are give a number of hints that help you know the range in which number you need to guess falls \n" +
                 "(for example, 50 falls within the range of 47~53)\n");
+        //Score rule
         System.out.println("If you guess the correct number, the result is determined based on the time taken for your guess," +
                 "\n the number of remaining chances and the number of remaining hints." +
                 "\nThe better you guess with less time, fewer guessing chances used and less use of hints" +
@@ -41,7 +42,7 @@ public class GameProgram {
                 "Let's start the game!\n");
         //Validate user guess
         Game main = new Game(userchoice, userchoice);
-
+        //Check time guess
         long start = System.currentTimeMillis();
         int score = 0;
         main.setHighest(Score);
@@ -102,6 +103,7 @@ public class GameProgram {
         }
         System.out.println("\nGAME OVER! you've run out of chance\n");
     }
+    //For play again
     public static void Restart() {
         GameLogic();
         System.out.println("If you guess the correct number, the result is determined based on the time taken for your guess," +
